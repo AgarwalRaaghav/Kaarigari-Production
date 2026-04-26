@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+    <script>
+      // Fix for "Cannot set property fetch of #<Window> which has only a getter"
+      (function() {
+        try {
+          if (typeof window !== 'undefined' && !('fetch' in window)) {
+            // If it's missing, we don't do anything yet, the first library that sets it will.
+          } else if (typeof window !== 'undefined') {
+            const descriptor = Object.getOwnPropertyDescriptor(window, 'fetch');
+            if (descriptor && !descriptor.writable && !descriptor.set) {
+              console.log('Fixing fetch property descriptor...');
+              const originalFetch = window.fetch;
+              // Attempt to make it writable or at least just skip re-assignment errors
+              // Some libraries do window.fetch = window.fetch.bind(window)
+              // If we can't change it, we just proxy it or ignore assignments.
+              try {
+                // This might fail if configurable is false
+                Object.defineProperty(window, 'fetch', {
+                  value: originalFetch,
+                  writable: true,
+                  configurable: true,
+                  enumerable: true
+                });
+              } catch (e) {
+                // If we can't redefine, we can't do much about the direct assignment error
+                // unless we use a Proxy on the whole window, which is too much.
+                // But often descriptor is configurable.
+              }
+            }
+          }
+        } catch (err) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
