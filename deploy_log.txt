@@ -1,0 +1,26 @@
+Retrieving project…
+Deploying raaghav092-gmailcoms-projects/kaarigari-production
+Uploading [--------------------] (0.0B/1.6MB)
+Uploading [=====---------------] (427.3KB/1.6MB)
+Uploading [==========----------] (843.4KB/1.6MB)
+Uploading [===============-----] (1.2MB/1.6MB)
+Uploading [====================] (1.6MB/1.6MB)
+Inspect: https://vercel.com/raaghav092-gmailcoms-projects/kaarigari-production/JD477E57xdMu1Hc3nUSTn9Nhi78A [4s]
+Production: https://kaarigari-production-19hb93ohp-raaghav092-gmailcoms-projects.vercel.app [4s]
+https://kaarigari-production-19hb93ohp-raaghav092-gmailcoms-projects.vercel.appBuilding...
+Building...
+Building: Running build in Washington, D.C., USA (East) – iad1
+Building: Build machine configuration: 2 cores, 8 GB
+Building: Retrieving list of deployment files...
+Building: Downloading 29 deployment files...
+Building: Restored build cache from previous deployment (CeKHn5nfW4R2krcNKMtK8THbqDeG)
+Building: Running "vercel build"
+Building: Vercel CLI 51.6.1
+Building: Installing dependencies...
+Building: npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+Building: added 402 packages, removed 232 packages, and changed 19 packages in 17s
+Building: 131 packages are looking for funding
+Building: run `npm fund` for details
+Building: Warning: Could not identify Next.js version, ensure it is defined as a project dependency.
+Building: Error: No Next.js version detected. Make sure your package.json has "next" in either "dependencies" or "devDependencies". Also check your Root Directory setting matches the directory of your package.json file.
+Error: No Next.js version detected. Make sure your package.json has "next" in either "dependencies" or "devDependencies". Also check your Root Directory setting matches the directory of your package.json file.
